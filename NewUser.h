@@ -158,7 +158,7 @@ namespace 家庭信息管理系统 {
 			printf("文件打开失败！");
 			return;
 		}
-		fprintf(fout, "user=%s password=%s\n", userName, passWord);
+		fprintf(fout, "user=%s password=%s", userName, passWord);
 		fclose(fout);
 		MessageBox::Show("注册成功！");
 		this->Close();
