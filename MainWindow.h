@@ -122,6 +122,7 @@ namespace 家庭信息管理系统 {
 		this->Show();
 	}
 	protected: virtual void OnFormClosing(FormClosingEventArgs^ e) override {
+		printf("主窗口取消关闭！");
 		e->Cancel = true; // 取消关闭事件
 		this->Show();
 		CloseConfirm^ closeConfirm = gcnew CloseConfirm();

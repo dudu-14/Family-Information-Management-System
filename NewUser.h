@@ -158,7 +158,9 @@ namespace 家庭信息管理系统 {
 			printf("文件打开失败！");
 			return;
 		}
-		fprintf(fout, "user=%s password=%s", userName, passWord);
+		std::string stdString_username = msclr::interop::marshal_as<std::string>(userName);
+		std::string stdString_password = msclr::interop::marshal_as<std::string>(passWord);
+		fprintf(fout, "username=%s password=%s\n", stdString_username.data(), stdString_password.data());
 		fclose(fout);
 		MessageBox::Show("注册成功！");
 		this->Close();

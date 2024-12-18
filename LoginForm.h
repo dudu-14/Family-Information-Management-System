@@ -203,11 +203,11 @@ namespace 家庭信息管理系统 {
 		std::string thisPassWord = msclr::interop::marshal_as<std::string>(passWord);
 		std::string file_userName;
 		std::string file_passWord;
-		while (fscanf(fin, "user=%s password=%s", file_userName.data(), file_passWord.data()) != EOF)
+		while (fscanf(fin, "username=%s password=%s", file_userName.data(), file_passWord.data()) != EOF)
 		{
 			printf("文件 name %s password %s\n", file_userName.c_str(), file_passWord.c_str());
-			const char*file_username_const=file_userName.data();
-			const char*file_password_const=file_passWord.data();
+			const char* file_username_const = file_userName.data();
+			const char* file_password_const = file_passWord.data();
 			if (strcmp(file_userName.c_str(), thisUserName.c_str()) == 0 && strcmp(file_passWord.c_str(), thisPassWord.c_str()) == 0)
 			{
 				fclose(fin);
@@ -216,6 +216,9 @@ namespace 家庭信息管理系统 {
 				this->Close();
 				return;
 			}
+#ifdef _DEBUG
+			Sleep(100);
+#endif
 		}
 		MessageBox::Show("用户名或密码错误！", "错误", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		printf("用户名或密码错误！\n");

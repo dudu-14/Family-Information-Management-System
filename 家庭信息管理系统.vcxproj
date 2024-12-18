@@ -132,6 +132,9 @@
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MainInterface.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MainWindow.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -148,6 +151,7 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CloseConfirm.cpp" />
     <ClCompile Include="LoginForm.cpp" />
+    <ClCompile Include="MainInterface.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="NewUser.cpp" />
     <ClCompile Include="pch.cpp">
@@ -175,6 +179,9 @@
     <EmbeddedResource Include="exit.resx" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainInterface.resx">
+      <DependentUpon>MainInterface.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.h</DependentUpon>
