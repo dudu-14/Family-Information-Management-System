@@ -7,3 +7,4 @@ admin admin
 user=122 password=1224
 user=123@ password=6666@
 user=111@ password=111@
+user=admin@ password=admin@
