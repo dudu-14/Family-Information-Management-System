@@ -16,7 +16,7 @@ namespace 家庭信息管理系统 {
 	public ref class MainInterface : public System::Windows::Forms::Form
 	{
 	public:
-		MainInterface(void)
+		MainInterface(String^ this_username)
 		{
 			InitializeComponent();
 			//

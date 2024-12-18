@@ -1,5 +1,6 @@
 #pragma once
 #include "NewUser.h"
+#include "MainInterface.h"
 
 namespace 家庭信息管理系统 {
 
@@ -213,6 +214,8 @@ namespace 家庭信息管理系统 {
 				fclose(fin);
 				MessageBox::Show("登录成功！", "成功", MessageBoxButtons::OK, MessageBoxIcon::Information);
 				printf("登录成功！\n");
+				MainInterface^ mainInterface = gcnew MainInterface(userName);
+				mainInterface->Show();
 				this->Close();
 				return;
 			}
